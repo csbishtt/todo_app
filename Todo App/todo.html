@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="todo.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+    .btn-todo {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    @media (min-width: 768px) {
+      /* For screens wider than 768px */
+      .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  </style>
+  <title>Todo App</title>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Todo App</a>
+  </div>
+
+  <div class="grid-container">
+    <input id="todo-input" type="text" placeholder="Enter Todo here">
+    <input id="todo-date" type="date">
+    <button class='btn-todo' onclick="addTodo();">Add</button>
+  </div>
+
+  <div class="todo-container grid-container"></div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
